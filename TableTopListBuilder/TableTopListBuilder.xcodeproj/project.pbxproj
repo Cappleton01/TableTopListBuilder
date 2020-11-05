@@ -99,12 +99,9 @@
 		EFC46690255468B80053DC06 /* TableTopListBuilder */ = {
 			isa = PBXGroup;
 			children = (
-				EFC46691255468B80053DC06 /* AppDelegate.swift */,
-				EFC46693255468B80053DC06 /* SceneDelegate.swift */,
-				EFC46695255468B80053DC06 /* ViewController.swift */,
-				EFC46697255468B80053DC06 /* Main.storyboard */,
-				EFC4669A255468B90053DC06 /* Assets.xcassets */,
-				EFC4669C255468B90053DC06 /* LaunchScreen.storyboard */,
+				EFC466D225546AD40053DC06 /* Assets */,
+				EFC466CD25546AC40053DC06 /* Delegates */,
+				EFC466D125546ACC0053DC06 /* View Controllers */,
 				EFC4669F255468B90053DC06 /* Info.plist */,
 			);
 			path = TableTopListBuilder;
@@ -126,6 +123,33 @@
 				EFC466B5255468B90053DC06 /* Info.plist */,
 			);
 			path = TableTopListBuilderUITests;
+			sourceTree = "<group>";
+		};
+		EFC466CD25546AC40053DC06 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				EFC46691255468B80053DC06 /* AppDelegate.swift */,
+				EFC46693255468B80053DC06 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		EFC466D125546ACC0053DC06 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EFC46695255468B80053DC06 /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		EFC466D225546AD40053DC06 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				EFC46697255468B80053DC06 /* Main.storyboard */,
+				EFC4669A255468B90053DC06 /* Assets.xcassets */,
+				EFC4669C255468B90053DC06 /* LaunchScreen.storyboard */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,7 +390,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -421,7 +445,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
