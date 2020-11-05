@@ -9,12 +9,27 @@
 /* Begin PBXBuildFile section */
 		EFC46692255468B80053DC06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC46691255468B80053DC06 /* AppDelegate.swift */; };
 		EFC46694255468B80053DC06 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC46693255468B80053DC06 /* SceneDelegate.swift */; };
-		EFC46696255468B80053DC06 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC46695255468B80053DC06 /* ViewController.swift */; };
 		EFC46699255468B80053DC06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFC46697255468B80053DC06 /* Main.storyboard */; };
 		EFC4669B255468B90053DC06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFC4669A255468B90053DC06 /* Assets.xcassets */; };
 		EFC4669E255468B90053DC06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFC4669C255468B90053DC06 /* LaunchScreen.storyboard */; };
 		EFC466A9255468B90053DC06 /* TableTopListBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC466A8255468B90053DC06 /* TableTopListBuilderTests.swift */; };
 		EFC466B4255468B90053DC06 /* TableTopListBuilderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC466B3255468B90053DC06 /* TableTopListBuilderUITests.swift */; };
+		EFC466F9255475920053DC06 /* Roster.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC466F8255475920053DC06 /* Roster.swift */; };
+		EFC466FE255476AC0053DC06 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC466FD255476AC0053DC06 /* Game.swift */; };
+		EFC467032554773B0053DC06 /* Catalogue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC467022554773B0053DC06 /* Catalogue.swift */; };
+		EFC4670825547A9A0053DC06 /* ForceOrganisation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC4670725547A9A0053DC06 /* ForceOrganisation.swift */; };
+		EFC4670E25548BCE0053DC06 /* RosterForce.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC4670D25548BCE0053DC06 /* RosterForce.swift */; };
+		EFC4671925548C4C0053DC06 /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC4671825548C4C0053DC06 /* Unit.swift */; };
+		EFC4672125548CA20053DC06 /* RosterUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC4672025548CA20053DC06 /* RosterUnit.swift */; };
+		EFC4672625548EE60053DC06 /* IdentifiableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC4672525548EE60053DC06 /* IdentifiableProtocol.swift */; };
+		EFC4672C25548F1F0053DC06 /* PointsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC4672B25548F1F0053DC06 /* PointsProtocol.swift */; };
+		EFC4673225548FF00053DC06 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC4673025548FF00053DC06 /* Model.swift */; };
+		EFC4673325548FF00053DC06 /* ModelStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC4673125548FF00053DC06 /* ModelStats.swift */; };
+		EFC4673B2554906F0053DC06 /* RosterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC4673A2554906F0053DC06 /* RosterModel.swift */; };
+		EFC46740255492620053DC06 /* RostersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC4673F255492620053DC06 /* RostersTableViewController.swift */; };
+		EFC467482554955E0053DC06 /* DataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC467472554955E0053DC06 /* DataTableViewController.swift */; };
+		EFC4674D255495A40053DC06 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC4674C255495A40053DC06 /* Data.swift */; };
+		EFC46758255498910053DC06 /* CommandPointsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC46757255498910053DC06 /* CommandPointsProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +53,6 @@
 		EFC4668E255468B80053DC06 /* TableTopListBuilder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableTopListBuilder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFC46691255468B80053DC06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFC46693255468B80053DC06 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EFC46695255468B80053DC06 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EFC46698255468B80053DC06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EFC4669A255468B90053DC06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFC4669D255468B90053DC06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +63,22 @@
 		EFC466AF255468B90053DC06 /* TableTopListBuilderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableTopListBuilderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFC466B3255468B90053DC06 /* TableTopListBuilderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableTopListBuilderUITests.swift; sourceTree = "<group>"; };
 		EFC466B5255468B90053DC06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFC466F8255475920053DC06 /* Roster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Roster.swift; sourceTree = "<group>"; };
+		EFC466FD255476AC0053DC06 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		EFC467022554773B0053DC06 /* Catalogue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Catalogue.swift; sourceTree = "<group>"; };
+		EFC4670725547A9A0053DC06 /* ForceOrganisation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceOrganisation.swift; sourceTree = "<group>"; };
+		EFC4670D25548BCE0053DC06 /* RosterForce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterForce.swift; sourceTree = "<group>"; };
+		EFC4671825548C4C0053DC06 /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
+		EFC4672025548CA20053DC06 /* RosterUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterUnit.swift; sourceTree = "<group>"; };
+		EFC4672525548EE60053DC06 /* IdentifiableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentifiableProtocol.swift; sourceTree = "<group>"; };
+		EFC4672B25548F1F0053DC06 /* PointsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointsProtocol.swift; sourceTree = "<group>"; };
+		EFC4673025548FF00053DC06 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		EFC4673125548FF00053DC06 /* ModelStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelStats.swift; sourceTree = "<group>"; };
+		EFC4673A2554906F0053DC06 /* RosterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterModel.swift; sourceTree = "<group>"; };
+		EFC4673F255492620053DC06 /* RostersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RostersTableViewController.swift; sourceTree = "<group>"; };
+		EFC467472554955E0053DC06 /* DataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableViewController.swift; sourceTree = "<group>"; };
+		EFC4674C255495A40053DC06 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		EFC46757255498910053DC06 /* CommandPointsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandPointsProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +131,7 @@
 			children = (
 				EFC466D225546AD40053DC06 /* Assets */,
 				EFC466CD25546AC40053DC06 /* Delegates */,
+				EFC466D325546BC90053DC06 /* Models */,
 				EFC466D125546ACC0053DC06 /* View Controllers */,
 				EFC4669F255468B90053DC06 /* Info.plist */,
 			);
@@ -137,7 +168,8 @@
 		EFC466D125546ACC0053DC06 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				EFC46695255468B80053DC06 /* ViewController.swift */,
+				EFC467472554955E0053DC06 /* DataTableViewController.swift */,
+				EFC4673F255492620053DC06 /* RostersTableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -145,11 +177,56 @@
 		EFC466D225546AD40053DC06 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				EFC46697255468B80053DC06 /* Main.storyboard */,
 				EFC4669A255468B90053DC06 /* Assets.xcassets */,
 				EFC4669C255468B90053DC06 /* LaunchScreen.storyboard */,
+				EFC46697255468B80053DC06 /* Main.storyboard */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		EFC466D325546BC90053DC06 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EFC4672A25548EEA0053DC06 /* Protocols */,
+				EFC4671525548BDC0053DC06 /* Data */,
+				EFC4670C25548BBA0053DC06 /* Roster */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EFC4670C25548BBA0053DC06 /* Roster */ = {
+			isa = PBXGroup;
+			children = (
+				EFC466F8255475920053DC06 /* Roster.swift */,
+				EFC4670D25548BCE0053DC06 /* RosterForce.swift */,
+				EFC4673A2554906F0053DC06 /* RosterModel.swift */,
+				EFC4672025548CA20053DC06 /* RosterUnit.swift */,
+			);
+			path = Roster;
+			sourceTree = "<group>";
+		};
+		EFC4671525548BDC0053DC06 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				EFC467022554773B0053DC06 /* Catalogue.swift */,
+				EFC4674C255495A40053DC06 /* Data.swift */,
+				EFC4670725547A9A0053DC06 /* ForceOrganisation.swift */,
+				EFC466FD255476AC0053DC06 /* Game.swift */,
+				EFC4673025548FF00053DC06 /* Model.swift */,
+				EFC4673125548FF00053DC06 /* ModelStats.swift */,
+				EFC4671825548C4C0053DC06 /* Unit.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		EFC4672A25548EEA0053DC06 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EFC46757255498910053DC06 /* CommandPointsProtocol.swift */,
+				EFC4672525548EE60053DC06 /* IdentifiableProtocol.swift */,
+				EFC4672B25548F1F0053DC06 /* PointsProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,9 +359,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFC46696255468B80053DC06 /* ViewController.swift in Sources */,
+				EFC4672125548CA20053DC06 /* RosterUnit.swift in Sources */,
+				EFC466FE255476AC0053DC06 /* Game.swift in Sources */,
+				EFC4670E25548BCE0053DC06 /* RosterForce.swift in Sources */,
+				EFC4671925548C4C0053DC06 /* Unit.swift in Sources */,
+				EFC4670825547A9A0053DC06 /* ForceOrganisation.swift in Sources */,
+				EFC4673225548FF00053DC06 /* Model.swift in Sources */,
+				EFC46758255498910053DC06 /* CommandPointsProtocol.swift in Sources */,
+				EFC4673325548FF00053DC06 /* ModelStats.swift in Sources */,
+				EFC46740255492620053DC06 /* RostersTableViewController.swift in Sources */,
+				EFC4672C25548F1F0053DC06 /* PointsProtocol.swift in Sources */,
+				EFC467482554955E0053DC06 /* DataTableViewController.swift in Sources */,
 				EFC46692255468B80053DC06 /* AppDelegate.swift in Sources */,
+				EFC4673B2554906F0053DC06 /* RosterModel.swift in Sources */,
+				EFC466F9255475920053DC06 /* Roster.swift in Sources */,
+				EFC4674D255495A40053DC06 /* Data.swift in Sources */,
 				EFC46694255468B80053DC06 /* SceneDelegate.swift in Sources */,
+				EFC467032554773B0053DC06 /* Catalogue.swift in Sources */,
+				EFC4672625548EE60053DC06 /* IdentifiableProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
