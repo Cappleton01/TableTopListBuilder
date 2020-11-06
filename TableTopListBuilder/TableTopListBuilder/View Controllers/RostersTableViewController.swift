@@ -12,6 +12,52 @@ class RostersTableViewController: UITableViewController {
     // MARK: RostersTableViewController Variables
     
     var rosters: [Roster] = []
+    
+    
+    // MARK: View Loading Methods
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Perform initial setup
+        let setupVC = SetupViewController(nibName: "SetupViewController", bundle: nil)
+        setupVC.modalPresentationStyle = .fullScreen
+        
+        self.tabBarController?.present(setupVC, animated: false) {
+            
+            self.setup()
+        }
+    }
+    
+    
+    // MARK: Helper Methods
+    
+    private func setup() {
+        
+        DataManager.sharedInstance.setup {
+            RosterManager.sharedInstance.setup {
+                DispatchQueue.main.async {
+                    
+                    self.setupCompletion()
+                }
+            }
+        }
+    }
+    
+    private func setupCompletion() {
+        
+        self.tabBarController?.dismiss(animated: true) {
+            
+            if DataManager.sharedInstance.data.isEmpty {
+                
+                self.tabBarController?.selectedIndex = 1
+            }
+            else if RosterManager.sharedInstance.rosters.isEmpty {
+                
+                // TODO: Present new roster form?
+            }
+        }
+    }
 
     
     // MARK: UITableViewDelegate Methods

@@ -30,6 +30,10 @@
 		EFC467482554955E0053DC06 /* DataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC467472554955E0053DC06 /* DataTableViewController.swift */; };
 		EFC4674D255495A40053DC06 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC4674C255495A40053DC06 /* Data.swift */; };
 		EFC46758255498910053DC06 /* CommandPointsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC46757255498910053DC06 /* CommandPointsProtocol.swift */; };
+		EFC4676025549B810053DC06 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC4675F25549B810053DC06 /* DataManager.swift */; };
+		EFC467692554B3C90053DC06 /* RosterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC467682554B3C90053DC06 /* RosterManager.swift */; };
+		EFC4676F2554C8260053DC06 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC4676D2554C8260053DC06 /* SetupViewController.swift */; };
+		EFC467702554C8260053DC06 /* SetupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFC4676E2554C8260053DC06 /* SetupViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +83,10 @@
 		EFC467472554955E0053DC06 /* DataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableViewController.swift; sourceTree = "<group>"; };
 		EFC4674C255495A40053DC06 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		EFC46757255498910053DC06 /* CommandPointsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandPointsProtocol.swift; sourceTree = "<group>"; };
+		EFC4675F25549B810053DC06 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		EFC467682554B3C90053DC06 /* RosterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterManager.swift; sourceTree = "<group>"; };
+		EFC4676D2554C8260053DC06 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
+		EFC4676E2554C8260053DC06 /* SetupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetupViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +139,7 @@
 			children = (
 				EFC466D225546AD40053DC06 /* Assets */,
 				EFC466CD25546AC40053DC06 /* Delegates */,
+				EFC467642554A8E80053DC06 /* Managers */,
 				EFC466D325546BC90053DC06 /* Models */,
 				EFC466D125546ACC0053DC06 /* View Controllers */,
 				EFC4669F255468B90053DC06 /* Info.plist */,
@@ -170,6 +179,8 @@
 			children = (
 				EFC467472554955E0053DC06 /* DataTableViewController.swift */,
 				EFC4673F255492620053DC06 /* RostersTableViewController.swift */,
+				EFC4676D2554C8260053DC06 /* SetupViewController.swift */,
+				EFC4676E2554C8260053DC06 /* SetupViewController.xib */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -227,6 +238,15 @@
 				EFC4672B25548F1F0053DC06 /* PointsProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		EFC467642554A8E80053DC06 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				EFC4675F25549B810053DC06 /* DataManager.swift */,
+				EFC467682554B3C90053DC06 /* RosterManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,6 +355,7 @@
 				EFC4669E255468B90053DC06 /* LaunchScreen.storyboard in Resources */,
 				EFC4669B255468B90053DC06 /* Assets.xcassets in Resources */,
 				EFC46699255468B80053DC06 /* Main.storyboard in Resources */,
+				EFC467702554C8260053DC06 /* SetupViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,8 +392,11 @@
 				EFC4672C25548F1F0053DC06 /* PointsProtocol.swift in Sources */,
 				EFC467482554955E0053DC06 /* DataTableViewController.swift in Sources */,
 				EFC46692255468B80053DC06 /* AppDelegate.swift in Sources */,
+				EFC467692554B3C90053DC06 /* RosterManager.swift in Sources */,
 				EFC4673B2554906F0053DC06 /* RosterModel.swift in Sources */,
+				EFC4676F2554C8260053DC06 /* SetupViewController.swift in Sources */,
 				EFC466F9255475920053DC06 /* Roster.swift in Sources */,
+				EFC4676025549B810053DC06 /* DataManager.swift in Sources */,
 				EFC4674D255495A40053DC06 /* Data.swift in Sources */,
 				EFC46694255468B80053DC06 /* SceneDelegate.swift in Sources */,
 				EFC467032554773B0053DC06 /* Catalogue.swift in Sources */,
