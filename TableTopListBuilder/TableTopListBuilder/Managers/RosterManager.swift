@@ -9,7 +9,7 @@ import Foundation
 
 class RosterManager {
     
-    // MARK: DataManager Variables
+    // MARK: Roster Variables
     
     static let sharedInstance = RosterManager()
     
@@ -25,12 +25,12 @@ class RosterManager {
     
     // MARK: Setup Methods
     
-    func setup(completionHandler: @escaping () -> Void) {
+    func setup(completion: @escaping () -> Void) {
         
         DispatchQueue.global().async {
             
             self.loadStoredRosters()
-            completionHandler()
+            completion()
         }
     }
     
@@ -40,7 +40,7 @@ class RosterManager {
     private func loadStoredRosters() {
         
         // TODO: check for data
-        Thread.sleep(forTimeInterval: 3)
+        Thread.sleep(forTimeInterval: 1)
         
         self.rosters = []
     }

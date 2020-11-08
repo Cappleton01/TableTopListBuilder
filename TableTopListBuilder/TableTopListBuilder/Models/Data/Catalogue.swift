@@ -7,9 +7,10 @@
 
 import Foundation
 
-class Catalogue: Codable {
+struct Catalogue: Codable {
     
     // MARK: Catalogue Variables
     
+    let name: String
     let units: [Unit]
 }
