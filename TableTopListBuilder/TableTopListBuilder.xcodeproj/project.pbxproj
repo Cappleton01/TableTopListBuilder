@@ -3,10 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF77083C2555C2F7007939ED /* RepositoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77083B2555C2F7007939ED /* RepositoriesTableViewController.swift */; };
+		EF7708442555C680007939ED /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7708432555C680007939ED /* Repository.swift */; };
+		EF7708492555C7E8007939ED /* RepositoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7708482555C7E8007939ED /* RepositoryManager.swift */; };
+		EF77086025560EB7007939ED /* RepositoryRelease.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77085F25560EB7007939ED /* RepositoryRelease.swift */; };
+		EF7708662556121C007939ED /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = EF7708652556121C007939ED /* Zip */; };
+		EF770871255704E9007939ED /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF770870255704E9007939ED /* DownloadManager.swift */; };
 		EFC46692255468B80053DC06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC46691255468B80053DC06 /* AppDelegate.swift */; };
 		EFC46694255468B80053DC06 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC46693255468B80053DC06 /* SceneDelegate.swift */; };
 		EFC46699255468B80053DC06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFC46697255468B80053DC06 /* Main.storyboard */; };
@@ -28,9 +34,7 @@
 		EFC4673B2554906F0053DC06 /* RosterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC4673A2554906F0053DC06 /* RosterModel.swift */; };
 		EFC46740255492620053DC06 /* RostersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC4673F255492620053DC06 /* RostersTableViewController.swift */; };
 		EFC467482554955E0053DC06 /* DataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC467472554955E0053DC06 /* DataTableViewController.swift */; };
-		EFC4674D255495A40053DC06 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC4674C255495A40053DC06 /* Data.swift */; };
 		EFC46758255498910053DC06 /* CommandPointsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC46757255498910053DC06 /* CommandPointsProtocol.swift */; };
-		EFC4676025549B810053DC06 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC4675F25549B810053DC06 /* DataManager.swift */; };
 		EFC467692554B3C90053DC06 /* RosterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC467682554B3C90053DC06 /* RosterManager.swift */; };
 		EFC4676F2554C8260053DC06 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC4676D2554C8260053DC06 /* SetupViewController.swift */; };
 		EFC467702554C8260053DC06 /* SetupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFC4676E2554C8260053DC06 /* SetupViewController.xib */; };
@@ -54,6 +58,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF77083B2555C2F7007939ED /* RepositoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesTableViewController.swift; sourceTree = "<group>"; };
+		EF7708432555C680007939ED /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		EF7708482555C7E8007939ED /* RepositoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryManager.swift; sourceTree = "<group>"; };
+		EF77085F25560EB7007939ED /* RepositoryRelease.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRelease.swift; sourceTree = "<group>"; };
+		EF770870255704E9007939ED /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
 		EFC4668E255468B80053DC06 /* TableTopListBuilder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableTopListBuilder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFC46691255468B80053DC06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFC46693255468B80053DC06 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,9 +90,7 @@
 		EFC4673A2554906F0053DC06 /* RosterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterModel.swift; sourceTree = "<group>"; };
 		EFC4673F255492620053DC06 /* RostersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RostersTableViewController.swift; sourceTree = "<group>"; };
 		EFC467472554955E0053DC06 /* DataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableViewController.swift; sourceTree = "<group>"; };
-		EFC4674C255495A40053DC06 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		EFC46757255498910053DC06 /* CommandPointsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandPointsProtocol.swift; sourceTree = "<group>"; };
-		EFC4675F25549B810053DC06 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		EFC467682554B3C90053DC06 /* RosterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterManager.swift; sourceTree = "<group>"; };
 		EFC4676D2554C8260053DC06 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		EFC4676E2554C8260053DC06 /* SetupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetupViewController.xib; sourceTree = "<group>"; };
@@ -94,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF7708662556121C007939ED /* Zip in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				EFC467472554955E0053DC06 /* DataTableViewController.swift */,
+				EF77083B2555C2F7007939ED /* RepositoriesTableViewController.swift */,
 				EFC4673F255492620053DC06 /* RostersTableViewController.swift */,
 				EFC4676D2554C8260053DC06 /* SetupViewController.swift */,
 				EFC4676E2554C8260053DC06 /* SetupViewController.xib */,
@@ -220,12 +229,13 @@
 			isa = PBXGroup;
 			children = (
 				EFC467022554773B0053DC06 /* Catalogue.swift */,
-				EFC4674C255495A40053DC06 /* Data.swift */,
 				EFC4670725547A9A0053DC06 /* ForceOrganisation.swift */,
 				EFC466FD255476AC0053DC06 /* Game.swift */,
 				EFC4673025548FF00053DC06 /* Model.swift */,
 				EFC4673125548FF00053DC06 /* ModelStats.swift */,
 				EFC4671825548C4C0053DC06 /* Unit.swift */,
+				EF7708432555C680007939ED /* Repository.swift */,
+				EF77085F25560EB7007939ED /* RepositoryRelease.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -243,7 +253,8 @@
 		EFC467642554A8E80053DC06 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				EFC4675F25549B810053DC06 /* DataManager.swift */,
+				EF770870255704E9007939ED /* DownloadManager.swift */,
+				EF7708482555C7E8007939ED /* RepositoryManager.swift */,
 				EFC467682554B3C90053DC06 /* RosterManager.swift */,
 			);
 			path = Managers;
@@ -265,6 +276,9 @@
 			dependencies = (
 			);
 			name = TableTopListBuilder;
+			packageProductDependencies = (
+				EF7708652556121C007939ED /* Zip */,
+			);
 			productName = TableTopListBuilder;
 			productReference = EFC4668E255468B80053DC06 /* TableTopListBuilder.app */;
 			productType = "com.apple.product-type.application";
@@ -336,6 +350,9 @@
 				Base,
 			);
 			mainGroup = EFC46685255468B80053DC06;
+			packageReferences = (
+				EF7708642556121C007939ED /* XCRemoteSwiftPackageReference "Zip" */,
+			);
 			productRefGroup = EFC4668F255468B80053DC06 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -381,6 +398,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFC4672125548CA20053DC06 /* RosterUnit.swift in Sources */,
+				EF77083C2555C2F7007939ED /* RepositoriesTableViewController.swift in Sources */,
 				EFC466FE255476AC0053DC06 /* Game.swift in Sources */,
 				EFC4670E25548BCE0053DC06 /* RosterForce.swift in Sources */,
 				EFC4671925548C4C0053DC06 /* Unit.swift in Sources */,
@@ -391,13 +409,15 @@
 				EFC46740255492620053DC06 /* RostersTableViewController.swift in Sources */,
 				EFC4672C25548F1F0053DC06 /* PointsProtocol.swift in Sources */,
 				EFC467482554955E0053DC06 /* DataTableViewController.swift in Sources */,
+				EF7708442555C680007939ED /* Repository.swift in Sources */,
 				EFC46692255468B80053DC06 /* AppDelegate.swift in Sources */,
 				EFC467692554B3C90053DC06 /* RosterManager.swift in Sources */,
 				EFC4673B2554906F0053DC06 /* RosterModel.swift in Sources */,
 				EFC4676F2554C8260053DC06 /* SetupViewController.swift in Sources */,
+				EF7708492555C7E8007939ED /* RepositoryManager.swift in Sources */,
 				EFC466F9255475920053DC06 /* Roster.swift in Sources */,
-				EFC4676025549B810053DC06 /* DataManager.swift in Sources */,
-				EFC4674D255495A40053DC06 /* Data.swift in Sources */,
+				EF770871255704E9007939ED /* DownloadManager.swift in Sources */,
+				EF77086025560EB7007939ED /* RepositoryRelease.swift in Sources */,
 				EFC46694255468B80053DC06 /* SceneDelegate.swift in Sources */,
 				EFC467032554773B0053DC06 /* Catalogue.swift in Sources */,
 				EFC4672625548EE60053DC06 /* IdentifiableProtocol.swift in Sources */,
@@ -733,6 +753,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EF7708642556121C007939ED /* XCRemoteSwiftPackageReference "Zip" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marmelroy/Zip";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EF7708652556121C007939ED /* Zip */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF7708642556121C007939ED /* XCRemoteSwiftPackageReference "Zip" */;
+			productName = Zip;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EFC46686255468B80053DC06 /* Project object */;
 }

@@ -7,6 +7,6 @@
 
 import Foundation
 
-class ForceOrganisation: Codable {
+struct ForceOrganisation: Codable {
     
 }
