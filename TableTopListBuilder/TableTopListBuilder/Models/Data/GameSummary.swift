@@ -1,26 +1,22 @@
 //
-//  Game.swift
+//  GameSummary.swift
 //  TableTopListBuilder
 //
-//  Created by Craig Appleton on 05/11/2020.
+//  Created by Craig Appleton on 09/11/2020.
 //
 
 import Foundation
 
-struct Game: Codable, Hashable {
-    
-    // MARK: Game Variables
+struct GameSummary: Codable, Hashable {
     
     let id: Int
     let name: String
-    let catalogues: [Catalogue]
-    
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
     }
     
-    static func == (lhs: Game, rhs: Game) -> Bool {
+    static func == (lhs: GameSummary, rhs: GameSummary) -> Bool {
         return lhs.id == rhs.id
     }
 }

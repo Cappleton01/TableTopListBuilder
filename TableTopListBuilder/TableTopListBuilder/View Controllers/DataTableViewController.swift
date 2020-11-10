@@ -13,7 +13,7 @@ class DataTableViewController: UITableViewController {
     
     private static let reuseIdentifier = "reuseIdentifier"
     
-    private var repos: [Repository] = []
+    private var games: [GameSummary] = []
     
     
     // MARK: View Loading
@@ -21,11 +21,11 @@ class DataTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.repos = Array(RepositoryManager.sharedInstance.activeRepositories)
+        self.games = Array(GamesManager.sharedInstance.activeGames)
         
-        if self.repos.isEmpty {
+        if self.games.isEmpty {
             
-            let nc = UINavigationController(rootViewController: RepositoriesTableViewController())
+            let nc = UINavigationController(rootViewController: GamesTableViewController())
             nc.modalPresentationStyle = .fullScreen
             
             self.tabBarController?.present(nc, animated: true, completion: nil)
@@ -38,7 +38,7 @@ class DataTableViewController: UITableViewController {
     // MARK: UITableViewDataSource Methods
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.repos.count
+        return self.games.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -46,7 +46,7 @@ class DataTableViewController: UITableViewController {
         let reuseIdentifier = DataTableViewController.reuseIdentifier
         
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) ?? UITableViewCell(style: .subtitle, reuseIdentifier: reuseIdentifier)
-        cell.textLabel?.text = repos[indexPath.row].name
+        cell.textLabel?.text = games[indexPath.row].name
         
         return cell
     }

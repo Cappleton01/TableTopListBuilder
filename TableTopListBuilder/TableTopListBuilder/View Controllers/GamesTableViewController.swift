@@ -1,5 +1,5 @@
 //
-//  RepositoriesTableViewController.swift
+//  GamesTableViewController.swift
 //  TableTopListBuilder
 //
 //  Created by Craig Appleton on 06/11/2020.
@@ -7,12 +7,12 @@
 
 import UIKit
 
-class RepositoriesTableViewController: UITableViewController {
+class GamesTableViewController: UITableViewController {
     
     private static let reuseIdentifier = "reuseIdentifier"
     
-    var repos: [Repository] = []
-    private var selectedRepos: Set<Repository> = []
+    var games: [GameSummary] = []
+    private var selectedGames: Set<GameSummary> = []
 
     // MARK: View Loading Methods
     
@@ -22,13 +22,13 @@ class RepositoriesTableViewController: UITableViewController {
         self.title = "Repositories"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(done(_:)))
         
-        RepositoryManager.sharedInstance.requestData { (result) in
+        GamesManager.sharedInstance.requestData { (result) in
             
             DispatchQueue.main.async {
                 
                 switch result {
-                case .success(let repos):
-                    self.handleRepositoryRequestSuccess(repos: repos)
+                case .success(let games):
+                    self.handleRepositoryRequestSuccess(games: games)
                 case .failure(let error):
                     self.handleRepositoryRequestFailure(error: error)
                 }
@@ -39,29 +39,21 @@ class RepositoriesTableViewController: UITableViewController {
     
     // MARK: Data Retrieval Handler Methods
     
-    private func handleRepositoryRequestSuccess(repos: [Repository]) {
+    private func handleRepositoryRequestSuccess(games: [GameSummary]) {
         
-        self.repos = repos
+        self.games = games
         self.tableView.reloadData()
     }
     
-    private func handleRepositoryRequestFailure(error: RepositoryManager.Error) {
+    private func handleRepositoryRequestFailure(error: Error) {
         
         // TODO: show alert with correct text
-        switch error {
-        case .invalidURL:
-            ()
-        case .httpRequestFailed(_):
-            ()
-        case .decodeFailure:
-            ()
-        }
     }
     
     
     // MARK: Helper Methods
     
-    private func repoStatusText(for downloadStatus: RepositoryManager.RepositoryStatus) -> String? {
+    private func gameStatusText(for downloadStatus: GamesManager.RepositoryStatus) -> String? {
         
         switch downloadStatus {
         case .notDownloaded: return "Not Downloaded"
@@ -73,20 +65,20 @@ class RepositoriesTableViewController: UITableViewController {
     }
     
     private func shouldHighlightRow(at indexPath: IndexPath) -> Bool {
-        return !RepositoryManager.sharedInstance.activeRepositories.contains(repos[indexPath.row])
+        return !GamesManager.sharedInstance.activeGames.contains(games[indexPath.row])
     }
     
     private func toggleRowSelection(at indexPath: IndexPath) {
         
-        let repo = repos[indexPath.row]
+        let repo = games[indexPath.row]
         
-        if selectedRepos.contains(repo) {
+        if selectedGames.contains(repo) {
             
-            selectedRepos.remove(repo)
+            selectedGames.remove(repo)
             self.tableView.deselectRow(at: indexPath, animated: true)
         }
         else {
-            selectedRepos.insert(repo)
+            selectedGames.insert(repo)
         }
     }
     
@@ -96,7 +88,7 @@ class RepositoriesTableViewController: UITableViewController {
     @objc private func done(_ sender: UIBarButtonItem) {
         
         // TODO: loading indicator etc
-        RepositoryManager.sharedInstance.addActiveRepositories(Array(selectedRepos))
+        GamesManager.sharedInstance.addActiveGames(Array(selectedGames))
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -104,16 +96,16 @@ class RepositoriesTableViewController: UITableViewController {
     // MARK: UITableViewDelegate Methods
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return repos.count
+        return games.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let reuseIdentifier = RepositoriesTableViewController.reuseIdentifier
+        let reuseIdentifier = GamesTableViewController.reuseIdentifier
         
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) ?? UITableViewCell(style: .default, reuseIdentifier: reuseIdentifier)
-        cell.textLabel?.text = repos[indexPath.row].name
-        cell.detailTextLabel?.text = repoStatusText(for: RepositoryManager.sharedInstance.status(for: repos[indexPath.row]))
+        cell.textLabel?.text = games[indexPath.row].name
+        cell.detailTextLabel?.text = gameStatusText(for: GamesManager.sharedInstance.status(for: games[indexPath.row]))
         
         return cell
     }

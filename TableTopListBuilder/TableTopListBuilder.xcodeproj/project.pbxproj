@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EF77083C2555C2F7007939ED /* RepositoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77083B2555C2F7007939ED /* RepositoriesTableViewController.swift */; };
+		EF77083C2555C2F7007939ED /* GamesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77083B2555C2F7007939ED /* GamesTableViewController.swift */; };
 		EF7708442555C680007939ED /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7708432555C680007939ED /* Repository.swift */; };
-		EF7708492555C7E8007939ED /* RepositoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7708482555C7E8007939ED /* RepositoryManager.swift */; };
+		EF7708492555C7E8007939ED /* GamesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7708482555C7E8007939ED /* GamesManager.swift */; };
 		EF77086025560EB7007939ED /* RepositoryRelease.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77085F25560EB7007939ED /* RepositoryRelease.swift */; };
 		EF7708662556121C007939ED /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = EF7708652556121C007939ED /* Zip */; };
 		EF770871255704E9007939ED /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF770870255704E9007939ED /* DownloadManager.swift */; };
@@ -38,6 +38,9 @@
 		EFC467692554B3C90053DC06 /* RosterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC467682554B3C90053DC06 /* RosterManager.swift */; };
 		EFC4676F2554C8260053DC06 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC4676D2554C8260053DC06 /* SetupViewController.swift */; };
 		EFC467702554C8260053DC06 /* SetupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFC4676E2554C8260053DC06 /* SetupViewController.xib */; };
+		EFD409262559423A003158F7 /* GamesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD409252559423A003158F7 /* GamesRepository.swift */; };
+		EFD4092B25594257003158F7 /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4092A25594257003158F7 /* BaseRepository.swift */; };
+		EFD4093325594E89003158F7 /* GameSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4093225594E89003158F7 /* GameSummary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,9 +61,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		EF77083B2555C2F7007939ED /* RepositoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesTableViewController.swift; sourceTree = "<group>"; };
+		EF77083B2555C2F7007939ED /* GamesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesTableViewController.swift; sourceTree = "<group>"; };
 		EF7708432555C680007939ED /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
-		EF7708482555C7E8007939ED /* RepositoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryManager.swift; sourceTree = "<group>"; };
+		EF7708482555C7E8007939ED /* GamesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesManager.swift; sourceTree = "<group>"; };
 		EF77085F25560EB7007939ED /* RepositoryRelease.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRelease.swift; sourceTree = "<group>"; };
 		EF770870255704E9007939ED /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
 		EFC4668E255468B80053DC06 /* TableTopListBuilder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableTopListBuilder.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +97,9 @@
 		EFC467682554B3C90053DC06 /* RosterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterManager.swift; sourceTree = "<group>"; };
 		EFC4676D2554C8260053DC06 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		EFC4676E2554C8260053DC06 /* SetupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetupViewController.xib; sourceTree = "<group>"; };
+		EFD409252559423A003158F7 /* GamesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesRepository.swift; sourceTree = "<group>"; };
+		EFD4092A25594257003158F7 /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
+		EFD4093225594E89003158F7 /* GameSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSummary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +155,7 @@
 				EFC466CD25546AC40053DC06 /* Delegates */,
 				EFC467642554A8E80053DC06 /* Managers */,
 				EFC466D325546BC90053DC06 /* Models */,
+				EFD40924255941DA003158F7 /* Repositories */,
 				EFC466D125546ACC0053DC06 /* View Controllers */,
 				EFC4669F255468B90053DC06 /* Info.plist */,
 			);
@@ -186,7 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				EFC467472554955E0053DC06 /* DataTableViewController.swift */,
-				EF77083B2555C2F7007939ED /* RepositoriesTableViewController.swift */,
+				EF77083B2555C2F7007939ED /* GamesTableViewController.swift */,
 				EFC4673F255492620053DC06 /* RostersTableViewController.swift */,
 				EFC4676D2554C8260053DC06 /* SetupViewController.swift */,
 				EFC4676E2554C8260053DC06 /* SetupViewController.xib */,
@@ -231,6 +238,7 @@
 				EFC467022554773B0053DC06 /* Catalogue.swift */,
 				EFC4670725547A9A0053DC06 /* ForceOrganisation.swift */,
 				EFC466FD255476AC0053DC06 /* Game.swift */,
+				EFD4093225594E89003158F7 /* GameSummary.swift */,
 				EFC4673025548FF00053DC06 /* Model.swift */,
 				EFC4673125548FF00053DC06 /* ModelStats.swift */,
 				EFC4671825548C4C0053DC06 /* Unit.swift */,
@@ -254,10 +262,19 @@
 			isa = PBXGroup;
 			children = (
 				EF770870255704E9007939ED /* DownloadManager.swift */,
-				EF7708482555C7E8007939ED /* RepositoryManager.swift */,
+				EF7708482555C7E8007939ED /* GamesManager.swift */,
 				EFC467682554B3C90053DC06 /* RosterManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		EFD40924255941DA003158F7 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				EFD4092A25594257003158F7 /* BaseRepository.swift */,
+				EFD409252559423A003158F7 /* GamesRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -398,7 +415,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFC4672125548CA20053DC06 /* RosterUnit.swift in Sources */,
-				EF77083C2555C2F7007939ED /* RepositoriesTableViewController.swift in Sources */,
+				EF77083C2555C2F7007939ED /* GamesTableViewController.swift in Sources */,
+				EFD4093325594E89003158F7 /* GameSummary.swift in Sources */,
 				EFC466FE255476AC0053DC06 /* Game.swift in Sources */,
 				EFC4670E25548BCE0053DC06 /* RosterForce.swift in Sources */,
 				EFC4671925548C4C0053DC06 /* Unit.swift in Sources */,
@@ -411,15 +429,17 @@
 				EFC467482554955E0053DC06 /* DataTableViewController.swift in Sources */,
 				EF7708442555C680007939ED /* Repository.swift in Sources */,
 				EFC46692255468B80053DC06 /* AppDelegate.swift in Sources */,
+				EFD409262559423A003158F7 /* GamesRepository.swift in Sources */,
 				EFC467692554B3C90053DC06 /* RosterManager.swift in Sources */,
 				EFC4673B2554906F0053DC06 /* RosterModel.swift in Sources */,
 				EFC4676F2554C8260053DC06 /* SetupViewController.swift in Sources */,
-				EF7708492555C7E8007939ED /* RepositoryManager.swift in Sources */,
+				EF7708492555C7E8007939ED /* GamesManager.swift in Sources */,
 				EFC466F9255475920053DC06 /* Roster.swift in Sources */,
 				EF770871255704E9007939ED /* DownloadManager.swift in Sources */,
 				EF77086025560EB7007939ED /* RepositoryRelease.swift in Sources */,
 				EFC46694255468B80053DC06 /* SceneDelegate.swift in Sources */,
 				EFC467032554773B0053DC06 /* Catalogue.swift in Sources */,
+				EFD4092B25594257003158F7 /* BaseRepository.swift in Sources */,
 				EFC4672625548EE60053DC06 /* IdentifiableProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

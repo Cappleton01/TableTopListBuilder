@@ -34,7 +34,7 @@ class RostersTableViewController: UITableViewController {
     
     private func setup() {
         
-        RepositoryManager.sharedInstance.setup {
+        GamesManager.sharedInstance.setup {
             RosterManager.sharedInstance.setup {
                 DispatchQueue.main.async {
                     
@@ -48,7 +48,7 @@ class RostersTableViewController: UITableViewController {
         
         self.tabBarController?.dismiss(animated: true) {
             
-            if RepositoryManager.sharedInstance.activeRepositories.isEmpty {
+            if GamesManager.sharedInstance.activeGames.isEmpty {
                 
                 self.tabBarController?.selectedIndex = 1
             }
