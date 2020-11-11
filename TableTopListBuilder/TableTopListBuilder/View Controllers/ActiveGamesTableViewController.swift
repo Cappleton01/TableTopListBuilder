@@ -1,5 +1,5 @@
 //
-//  DataTableViewController.swift
+//  ActiveGamesTableViewController.swift
 //  TableTopListBuilder
 //
 //  Created by Craig Appleton on 05/11/2020.
@@ -7,9 +7,9 @@
 
 import UIKit
 
-class DataTableViewController: UITableViewController {
+class ActiveGamesTableViewController: UITableViewController {
     
-    // MARK: DataTableViewController Variables
+    // MARK: ActiveGamesTableViewController Variables
     
     private static let reuseIdentifier = "reuseIdentifier"
     
@@ -43,7 +43,7 @@ class DataTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let reuseIdentifier = DataTableViewController.reuseIdentifier
+        let reuseIdentifier = ActiveGamesTableViewController.reuseIdentifier
         
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) ?? UITableViewCell(style: .subtitle, reuseIdentifier: reuseIdentifier)
         cell.textLabel?.text = games[indexPath.row].name

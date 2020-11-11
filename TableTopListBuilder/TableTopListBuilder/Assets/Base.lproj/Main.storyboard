@@ -48,10 +48,10 @@
             </objects>
             <point key="canvasLocation" x="-877" y="263"/>
         </scene>
-        <!--Data Management-->
+        <!--Games-->
         <scene sceneID="Kpp-IF-oHN">
             <objects>
-                <tableViewController id="3yX-Wz-FCe" customClass="DataTableViewController" customModule="TableTopListBuilder" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="3yX-Wz-FCe" customClass="ActiveGamesTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0Pr-Ww-WrG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -61,17 +61,17 @@
                             <outlet property="delegate" destination="3yX-Wz-FCe" id="sgg-sP-U9M"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Data Management" id="Syr-TD-5QX"/>
+                    <navigationItem key="navigationItem" title="Games" id="Syr-TD-5QX"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7gz-fX-eKq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-149" y="973"/>
         </scene>
-        <!--Data-->
+        <!--Games-->
         <scene sceneID="UZI-kW-gS0">
             <objects>
                 <navigationController id="gQs-Ov-LR7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Data" id="anJ-tc-dHo"/>
+                    <tabBarItem key="tabBarItem" title="Games" id="anJ-tc-dHo"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eCY-Kd-W1a">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

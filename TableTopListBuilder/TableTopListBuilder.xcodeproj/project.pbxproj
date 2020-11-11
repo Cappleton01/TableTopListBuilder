@@ -33,7 +33,7 @@
 		EFC4673325548FF00053DC06 /* ModelStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC4673125548FF00053DC06 /* ModelStats.swift */; };
 		EFC4673B2554906F0053DC06 /* RosterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC4673A2554906F0053DC06 /* RosterModel.swift */; };
 		EFC46740255492620053DC06 /* RostersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC4673F255492620053DC06 /* RostersTableViewController.swift */; };
-		EFC467482554955E0053DC06 /* DataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC467472554955E0053DC06 /* DataTableViewController.swift */; };
+		EFC467482554955E0053DC06 /* ActiveGamesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC467472554955E0053DC06 /* ActiveGamesTableViewController.swift */; };
 		EFC46758255498910053DC06 /* CommandPointsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC46757255498910053DC06 /* CommandPointsProtocol.swift */; };
 		EFC467692554B3C90053DC06 /* RosterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC467682554B3C90053DC06 /* RosterManager.swift */; };
 		EFC4676F2554C8260053DC06 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC4676D2554C8260053DC06 /* SetupViewController.swift */; };
@@ -92,7 +92,7 @@
 		EFC4673125548FF00053DC06 /* ModelStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelStats.swift; sourceTree = "<group>"; };
 		EFC4673A2554906F0053DC06 /* RosterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterModel.swift; sourceTree = "<group>"; };
 		EFC4673F255492620053DC06 /* RostersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RostersTableViewController.swift; sourceTree = "<group>"; };
-		EFC467472554955E0053DC06 /* DataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableViewController.swift; sourceTree = "<group>"; };
+		EFC467472554955E0053DC06 /* ActiveGamesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveGamesTableViewController.swift; sourceTree = "<group>"; };
 		EFC46757255498910053DC06 /* CommandPointsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandPointsProtocol.swift; sourceTree = "<group>"; };
 		EFC467682554B3C90053DC06 /* RosterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterManager.swift; sourceTree = "<group>"; };
 		EFC4676D2554C8260053DC06 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
@@ -192,7 +192,7 @@
 		EFC466D125546ACC0053DC06 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				EFC467472554955E0053DC06 /* DataTableViewController.swift */,
+				EFC467472554955E0053DC06 /* ActiveGamesTableViewController.swift */,
 				EF77083B2555C2F7007939ED /* GamesTableViewController.swift */,
 				EFC4673F255492620053DC06 /* RostersTableViewController.swift */,
 				EFC4676D2554C8260053DC06 /* SetupViewController.swift */,
@@ -426,7 +426,7 @@
 				EFC4673325548FF00053DC06 /* ModelStats.swift in Sources */,
 				EFC46740255492620053DC06 /* RostersTableViewController.swift in Sources */,
 				EFC4672C25548F1F0053DC06 /* PointsProtocol.swift in Sources */,
-				EFC467482554955E0053DC06 /* DataTableViewController.swift in Sources */,
+				EFC467482554955E0053DC06 /* ActiveGamesTableViewController.swift in Sources */,
 				EF7708442555C680007939ED /* Repository.swift in Sources */,
 				EFC46692255468B80053DC06 /* AppDelegate.swift in Sources */,
 				EFD409262559423A003158F7 /* GamesRepository.swift in Sources */,
