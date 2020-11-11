@@ -64,26 +64,39 @@ class DownloadManager {
             self.handleDataTaskCallback(data: data, response: response, error: error) { (data) in
                 
                 do {
-                    let paths = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)
-                    let filePath = paths[0].appendingPathComponent(UUID().uuidString).appendingPathExtension(DownloadManager.zipExtension)
+                    // Check the extraction url exists and create it if not
+                    if FileManager.default.fileExists(atPath: extractionURL.relativePath) == false {
+                        try FileManager.default.createDirectory(at: extractionURL, withIntermediateDirectories: true, attributes: nil)
+                    }
                     
+                    // Create paths for the zip, and its extraction
+                    let paths = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)
+                    let destination = paths[0].appendingPathComponent(UUID().uuidString)
+                    let filePath = destination.appendingPathExtension(DownloadManager.zipExtension)
+                    
+                    // Write the zip data to the file path
                     try data.write(to: filePath)
                     
                     var isRootFolder = true
                     
-                    try Zip.unzipFile(filePath, destination: extractionURL, overwrite: true, password: nil, progress: nil) { (unzippedResult) in
+                    // Unzip
+                    try Zip.unzipFile(filePath, destination: destination, overwrite: true, password: nil, progress: nil) { (unzippedResult) in
                         
+                        // If its the root folder we dont care, we only want the contents moving to the specified extraction url
                         if isRootFolder {
                             isRootFolder = false
                         }
                         else {
                             NSLog("unzipped file to \(unzippedResult.relativePath)", "")
                             
+                            let moveToURL = extractionURL.appendingPathComponent(unzippedResult.lastPathComponent)
+                            
                             do {
-                                try FileManager.default.moveItem(atPath: unzippedResult.relativePath, toPath: extractionURL.appendingPathComponent(unzippedResult.lastPathComponent).relativePath)
+                                try FileManager.default.moveItem(atPath: unzippedResult.relativePath,
+                                                                 toPath: moveToURL.relativePath)
                             }
                             catch {
-                                // TODO: Error
+                                NSLog("Error moving file from:\n\(unzippedResult) \nto:\n\(moveToURL)\nError: \(error)", "")
                             }
                         }
                     }

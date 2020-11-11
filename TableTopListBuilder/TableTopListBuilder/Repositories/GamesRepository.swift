@@ -101,7 +101,9 @@ class GamesRepository: BaseRepository<GameSummary, Game> {
         
         let fileManager = FileManager.default
         
-        guard let gamesFolders = try? fileManager.contentsOfDirectory(atPath: gamesFolderURL.relativePath) else {
+        guard let gamesFoldersURLs = try? fileManager.contentsOfDirectory(at: gamesFolderURL,
+                                                                          includingPropertiesForKeys: [],
+                                                                          options: .skipsHiddenFiles) else {
             
             completion(.success([]))
             
@@ -110,33 +112,11 @@ class GamesRepository: BaseRepository<GameSummary, Game> {
         
         var games = [Game]()
 
-        for gameFolderName in gamesFolders {
+        for gamesFoldersURL in gamesFoldersURLs {
             
-            let gameFolderURL = gamesFolderURL.appendingPathComponent(gameFolderName)
-            
-            guard let gameFolder = try? fileManager.contentsOfDirectory(atPath: gameFolderURL.relativePath),
-                  let summary = try? self.loadGameSummary(from: gameFolderURL) else {
-                
-                completion(.failure(Error.unknown))
-                return
-            }
-            
-            var catalogues = [Catalogue]()
-            
-            for folder in gameFolder {
-                
-                if folder.hasPrefix(summary.name) {
-                    
-                    do {
-                        catalogues = try self.loadCatalogues(from: gamesFolderURL.appendingPathComponent(folder))
-                    }
-                    catch {
-                        completion(.failure(Error.unknown))
-                    }
-                }
-            }
-            
-            if catalogues.isEmpty == false {
+            if let summary = try? self.loadGameSummary(from: gamesFoldersURL),
+               let catalogues = try? self.loadCatalogues(from: gamesFoldersURL),
+               catalogues.isEmpty == false {
                 games.append(Game(id: summary.id, name: summary.name, catalogues: catalogues))
             }
         }
@@ -169,31 +149,33 @@ class GamesRepository: BaseRepository<GameSummary, Game> {
     
     private func loadGameSummary(from folderURL: URL) throws -> GameSummary? {
         
-        let files = try FileManager.default.contentsOfDirectory(atPath: folderURL.relativePath)
+        let urls = try FileManager.default.contentsOfDirectory(at: folderURL,
+                                                               includingPropertiesForKeys: [],
+                                                               options: .skipsHiddenFiles)
         
-        guard let file = files.first(where: { $0.hasSuffix(GamesRepository.gameSummaryExtension) } ) else {
+        guard let url = urls.first(where: { $0.pathExtension == GamesRepository.gameSummaryExtension } ) else {
             return nil
         }
         
-        return try JSONDecoder().decode(GameSummary.self, from: try Data(contentsOf: folderURL.appendingPathComponent(file)))
+        return try JSONDecoder().decode(GameSummary.self, from: try Data(contentsOf: url))
     }
     
     private func loadCatalogues(from folderURL: URL) throws -> [Catalogue] {
         
-        let files = try FileManager.default.contentsOfDirectory(atPath: folderURL.relativePath)
+        let decoder = JSONDecoder()
+        let urls = try FileManager.default.contentsOfDirectory(at: folderURL,
+                                                               includingPropertiesForKeys: [],
+                                                               options: .skipsHiddenFiles)
         
-        var catalogues: [Catalogue] = []
-        
-        for file in files {
+        return try urls.compactMap { (url) -> Catalogue? in
             
-            if file.hasSuffix(GamesRepository.catalogueExtension) {
+            if url.pathExtension == GamesRepository.catalogueExtension {
                 
-                let catalogueData = try Data(contentsOf: folderURL.appendingPathComponent(file))
-                let catalogue = try JSONDecoder().decode(Catalogue.self, from: catalogueData)
-                catalogues.append(catalogue)
+                return try decoder.decode(Catalogue.self,
+                                          from: try Data(contentsOf: url))
             }
+            
+            return nil
         }
-        
-        return catalogues
     }
 }

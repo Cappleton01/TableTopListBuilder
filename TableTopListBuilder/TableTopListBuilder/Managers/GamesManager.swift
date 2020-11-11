@@ -68,48 +68,6 @@ class GamesManager {
     }
     
     
-    // MARK: Storage Methods
-    
-    private func loadStoredData() {
-        
-        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        let reposFolder = paths[0].appendingPathComponent("Repositories")
-        
-        if let folders = try? FileManager.default.contentsOfDirectory(atPath: reposFolder.relativePath) {
-            
-            for folder in folders {
-                
-                if folder.hasSuffix("repo") {
-                    
-                    let repoFolderURL = reposFolder.appendingPathComponent(folder)
-                    
-                    if let files = try? FileManager.default.contentsOfDirectory(atPath: repoFolderURL.relativePath) {
-                        
-                        var catalogues = [Catalogue]()
-                        
-                        for file in files {
-                            
-                            if file.hasSuffix(".cat") {
-                                
-                                do {
-                                    let catalogueData = try Data(contentsOf: repoFolderURL.appendingPathComponent(file))
-                                    let catalogue = try JSONDecoder().decode(Catalogue.self, from: catalogueData)
-                                    catalogues.append(catalogue)
-                                }
-                                catch {
-                                    
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        
-        self.activeGames = []
-    }
-    
-    
     // MARK: Active Repositories Methods
     
     func addActiveGames(_ gameSummaries: [GameSummary]) {
@@ -129,6 +87,9 @@ class GamesManager {
             }
         }
     }
+    
+    
+    // MARK: Helper Methods
     
     func status(for game: GameSummary) -> RepositoryStatus {
         /*
