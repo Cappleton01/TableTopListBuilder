@@ -17,6 +17,7 @@ class RosterDetailsViewController: UIViewController, UITableViewDataSource, UITa
     
     @IBOutlet private var forcesTableView: UITableView!
     @IBOutlet private var detailsTabView: UIView!
+    private var addBarButtonItem: UIBarButtonItem?
     
     
     // MARK: View Life Cycle Methods
@@ -24,22 +25,18 @@ class RosterDetailsViewController: UIViewController, UITableViewDataSource, UITa
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTouchUpInside(_:)))
+        self.navigationItem.rightBarButtonItem = addBarButtonItem
+        
         let segmentedControl = UISegmentedControl(items: ["Forces", "Details"])
+        segmentedControl.selectedSegmentIndex = 0
         segmentedControl.addTarget(self, action: #selector(segmentedControlValueDidChange(_:)), for: .valueChanged)
         
         self.navigationItem.titleView = segmentedControl
         
         if roster == nil {
             
-            let nc = RosterForceNavigationController(game: roster?.game)
-            nc.handler = { (game, force) in
-                
-                self.addForce(force, game: game)
-                self.dismiss(animated: true, completion: nil)
-            }
-            nc.modalPresentationStyle = .fullScreen
-            
-            self.present(nc, animated: true, completion: nil)
+            showRosterForceNavigationController()
         }
     }
     
@@ -56,6 +53,19 @@ class RosterDetailsViewController: UIViewController, UITableViewDataSource, UITa
     
     // MARK: Helper Methods
     
+    private func showRosterForceNavigationController() {
+        
+        let nc = RosterForceNavigationController(game: roster?.game)
+        nc.handler = { (game, force) in
+            
+            self.addForce(force, game: game)
+            self.dismiss(animated: true, completion: nil)
+        }
+        nc.modalPresentationStyle = .fullScreen
+        
+        self.present(nc, animated: true, completion: nil)
+    }
+    
     func addForce(_ force: RosterForce, game: Game) {
         
         let roster = self.roster ?? Roster(name: "New Roster", game: game, forces: [])
@@ -71,8 +81,14 @@ class RosterDetailsViewController: UIViewController, UITableViewDataSource, UITa
     
     // MARK: UI Callback Methods
     
+    @objc private func addButtonTouchUpInside(_ sender: UIBarButtonItem) {
+        
+        showRosterForceNavigationController()
+    }
+    
     @IBAction @objc private func segmentedControlValueDidChange(_ sender: UISegmentedControl) {
         
+        self.navigationItem.rightBarButtonItem = sender.selectedSegmentIndex == 0 ? addBarButtonItem : nil
         forcesTableView.isHidden = sender.selectedSegmentIndex != 0
         detailsTabView.isHidden = sender.selectedSegmentIndex != 1
     }
@@ -94,8 +110,9 @@ class RosterDetailsViewController: UIViewController, UITableViewDataSource, UITa
         
         let reuseIdentifier = RosterDetailsViewController.reuseIdentifier
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) ?? UITableViewCell(style: .default, reuseIdentifier: reuseIdentifier)
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) ?? UITableViewCell(style: .subtitle, reuseIdentifier: reuseIdentifier)
         cell.textLabel?.text = roster.forces[indexPath.row].catalogue.name
+        cell.detailTextLabel?.text = roster.forces[indexPath.row].detachment.name
         
         return cell
     }
