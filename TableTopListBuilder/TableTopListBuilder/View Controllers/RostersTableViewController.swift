@@ -30,6 +30,15 @@ class RostersTableViewController: UITableViewController {
     }
     
     
+    // MARK: UI Callback Methods
+    
+    @IBAction private func addRosterButtonTouchUpInside(_ sender: UIBarButtonItem) {
+        
+        let vc = RosterDetailsViewController(nibName: "RosterDetailsViewController", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
     // MARK: Helper Methods
     
     private func setup() {

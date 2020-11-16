@@ -22,7 +22,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Rosters" id="EuU-5Z-8gh">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="jAN-Fh-qHS"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="jAN-Fh-qHS">
+                            <connections>
+                                <action selector="addRosterButtonTouchUpInside:" destination="wl2-7L-26U" id="9S8-Nr-sNq"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wnK-LB-Yj8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

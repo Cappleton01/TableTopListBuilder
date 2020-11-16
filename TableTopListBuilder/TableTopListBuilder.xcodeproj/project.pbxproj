@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF301406255ED8CA00CC905B /* Detachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF301405255ED8CA00CC905B /* Detachment.swift */; };
+		EF30140E255EE03600CC905B /* DetachmentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF30140D255EE03600CC905B /* DetachmentsTableViewController.swift */; };
+		EF685029255EE7D700A7E1DA /* CataloguesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF685028255EE7D700A7E1DA /* CataloguesTableViewController.swift */; };
 		EF77083C2555C2F7007939ED /* GamesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77083B2555C2F7007939ED /* GamesTableViewController.swift */; };
-		EF7708442555C680007939ED /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7708432555C680007939ED /* Repository.swift */; };
 		EF7708492555C7E8007939ED /* GamesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7708482555C7E8007939ED /* GamesManager.swift */; };
-		EF77086025560EB7007939ED /* RepositoryRelease.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77085F25560EB7007939ED /* RepositoryRelease.swift */; };
+		EF77086025560EB7007939ED /* GameRelease.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77085F25560EB7007939ED /* GameRelease.swift */; };
 		EF7708662556121C007939ED /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = EF7708652556121C007939ED /* Zip */; };
 		EF770871255704E9007939ED /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF770870255704E9007939ED /* DownloadManager.swift */; };
+		EF9EF7A8255E8977001B056A /* CachedGamesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9EF7A7255E8977001B056A /* CachedGamesTableViewController.swift */; };
+		EF9EF7AD255E8D85001B056A /* RosterForceNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9EF7AC255E8D85001B056A /* RosterForceNavigationController.swift */; };
+		EFBE9717256280AC00F4EC16 /* RosterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBE9715256280AC00F4EC16 /* RosterDetailsViewController.swift */; };
+		EFBE9718256280AC00F4EC16 /* RosterDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFBE9716256280AC00F4EC16 /* RosterDetailsViewController.xib */; };
 		EFC46692255468B80053DC06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC46691255468B80053DC06 /* AppDelegate.swift */; };
 		EFC46694255468B80053DC06 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC46693255468B80053DC06 /* SceneDelegate.swift */; };
 		EFC46699255468B80053DC06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFC46697255468B80053DC06 /* Main.storyboard */; };
@@ -23,7 +29,6 @@
 		EFC466F9255475920053DC06 /* Roster.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC466F8255475920053DC06 /* Roster.swift */; };
 		EFC466FE255476AC0053DC06 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC466FD255476AC0053DC06 /* Game.swift */; };
 		EFC467032554773B0053DC06 /* Catalogue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC467022554773B0053DC06 /* Catalogue.swift */; };
-		EFC4670825547A9A0053DC06 /* ForceOrganisation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC4670725547A9A0053DC06 /* ForceOrganisation.swift */; };
 		EFC4670E25548BCE0053DC06 /* RosterForce.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC4670D25548BCE0053DC06 /* RosterForce.swift */; };
 		EFC4671925548C4C0053DC06 /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC4671825548C4C0053DC06 /* Unit.swift */; };
 		EFC4672125548CA20053DC06 /* RosterUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC4672025548CA20053DC06 /* RosterUnit.swift */; };
@@ -61,11 +66,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF301405255ED8CA00CC905B /* Detachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detachment.swift; sourceTree = "<group>"; };
+		EF30140D255EE03600CC905B /* DetachmentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetachmentsTableViewController.swift; sourceTree = "<group>"; };
+		EF685028255EE7D700A7E1DA /* CataloguesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CataloguesTableViewController.swift; sourceTree = "<group>"; };
 		EF77083B2555C2F7007939ED /* GamesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesTableViewController.swift; sourceTree = "<group>"; };
-		EF7708432555C680007939ED /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		EF7708482555C7E8007939ED /* GamesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesManager.swift; sourceTree = "<group>"; };
-		EF77085F25560EB7007939ED /* RepositoryRelease.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRelease.swift; sourceTree = "<group>"; };
+		EF77085F25560EB7007939ED /* GameRelease.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRelease.swift; sourceTree = "<group>"; };
 		EF770870255704E9007939ED /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
+		EF9EF7A7255E8977001B056A /* CachedGamesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedGamesTableViewController.swift; sourceTree = "<group>"; };
+		EF9EF7AC255E8D85001B056A /* RosterForceNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterForceNavigationController.swift; sourceTree = "<group>"; };
+		EFBE9715256280AC00F4EC16 /* RosterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterDetailsViewController.swift; sourceTree = "<group>"; };
+		EFBE9716256280AC00F4EC16 /* RosterDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RosterDetailsViewController.xib; sourceTree = "<group>"; };
 		EFC4668E255468B80053DC06 /* TableTopListBuilder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableTopListBuilder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFC46691255468B80053DC06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFC46693255468B80053DC06 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,7 +93,6 @@
 		EFC466F8255475920053DC06 /* Roster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Roster.swift; sourceTree = "<group>"; };
 		EFC466FD255476AC0053DC06 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		EFC467022554773B0053DC06 /* Catalogue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Catalogue.swift; sourceTree = "<group>"; };
-		EFC4670725547A9A0053DC06 /* ForceOrganisation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceOrganisation.swift; sourceTree = "<group>"; };
 		EFC4670D25548BCE0053DC06 /* RosterForce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterForce.swift; sourceTree = "<group>"; };
 		EFC4671825548C4C0053DC06 /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
 		EFC4672025548CA20053DC06 /* RosterUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterUnit.swift; sourceTree = "<group>"; };
@@ -128,6 +138,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF9EF7A6255E8904001B056A /* Roster Details */ = {
+			isa = PBXGroup;
+			children = (
+				EF9EF7A7255E8977001B056A /* CachedGamesTableViewController.swift */,
+				EF30140D255EE03600CC905B /* DetachmentsTableViewController.swift */,
+				EF9EF7AC255E8D85001B056A /* RosterForceNavigationController.swift */,
+				EF685028255EE7D700A7E1DA /* CataloguesTableViewController.swift */,
+				EFBE9715256280AC00F4EC16 /* RosterDetailsViewController.swift */,
+				EFBE9716256280AC00F4EC16 /* RosterDetailsViewController.xib */,
+			);
+			path = "Roster Details";
+			sourceTree = "<group>";
+		};
 		EFC46685255468B80053DC06 = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +215,7 @@
 		EFC466D125546ACC0053DC06 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EF9EF7A6255E8904001B056A /* Roster Details */,
 				EFC467472554955E0053DC06 /* ActiveGamesTableViewController.swift */,
 				EF77083B2555C2F7007939ED /* GamesTableViewController.swift */,
 				EFC4673F255492620053DC06 /* RostersTableViewController.swift */,
@@ -236,14 +260,13 @@
 			isa = PBXGroup;
 			children = (
 				EFC467022554773B0053DC06 /* Catalogue.swift */,
-				EFC4670725547A9A0053DC06 /* ForceOrganisation.swift */,
+				EF301405255ED8CA00CC905B /* Detachment.swift */,
 				EFC466FD255476AC0053DC06 /* Game.swift */,
 				EFD4093225594E89003158F7 /* GameSummary.swift */,
 				EFC4673025548FF00053DC06 /* Model.swift */,
 				EFC4673125548FF00053DC06 /* ModelStats.swift */,
 				EFC4671825548C4C0053DC06 /* Unit.swift */,
-				EF7708432555C680007939ED /* Repository.swift */,
-				EF77085F25560EB7007939ED /* RepositoryRelease.swift */,
+				EF77085F25560EB7007939ED /* GameRelease.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -387,6 +410,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFC4669E255468B90053DC06 /* LaunchScreen.storyboard in Resources */,
+				EFBE9718256280AC00F4EC16 /* RosterDetailsViewController.xib in Resources */,
 				EFC4669B255468B90053DC06 /* Assets.xcassets in Resources */,
 				EFC46699255468B80053DC06 /* Main.storyboard in Resources */,
 				EFC467702554C8260053DC06 /* SetupViewController.xib in Resources */,
@@ -414,20 +438,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFBE9717256280AC00F4EC16 /* RosterDetailsViewController.swift in Sources */,
 				EFC4672125548CA20053DC06 /* RosterUnit.swift in Sources */,
 				EF77083C2555C2F7007939ED /* GamesTableViewController.swift in Sources */,
 				EFD4093325594E89003158F7 /* GameSummary.swift in Sources */,
 				EFC466FE255476AC0053DC06 /* Game.swift in Sources */,
 				EFC4670E25548BCE0053DC06 /* RosterForce.swift in Sources */,
 				EFC4671925548C4C0053DC06 /* Unit.swift in Sources */,
-				EFC4670825547A9A0053DC06 /* ForceOrganisation.swift in Sources */,
 				EFC4673225548FF00053DC06 /* Model.swift in Sources */,
 				EFC46758255498910053DC06 /* CommandPointsProtocol.swift in Sources */,
 				EFC4673325548FF00053DC06 /* ModelStats.swift in Sources */,
 				EFC46740255492620053DC06 /* RostersTableViewController.swift in Sources */,
+				EF9EF7AD255E8D85001B056A /* RosterForceNavigationController.swift in Sources */,
 				EFC4672C25548F1F0053DC06 /* PointsProtocol.swift in Sources */,
 				EFC467482554955E0053DC06 /* ActiveGamesTableViewController.swift in Sources */,
-				EF7708442555C680007939ED /* Repository.swift in Sources */,
+				EF30140E255EE03600CC905B /* DetachmentsTableViewController.swift in Sources */,
 				EFC46692255468B80053DC06 /* AppDelegate.swift in Sources */,
 				EFD409262559423A003158F7 /* GamesRepository.swift in Sources */,
 				EFC467692554B3C90053DC06 /* RosterManager.swift in Sources */,
@@ -435,12 +460,15 @@
 				EFC4676F2554C8260053DC06 /* SetupViewController.swift in Sources */,
 				EF7708492555C7E8007939ED /* GamesManager.swift in Sources */,
 				EFC466F9255475920053DC06 /* Roster.swift in Sources */,
+				EF301406255ED8CA00CC905B /* Detachment.swift in Sources */,
 				EF770871255704E9007939ED /* DownloadManager.swift in Sources */,
-				EF77086025560EB7007939ED /* RepositoryRelease.swift in Sources */,
+				EF77086025560EB7007939ED /* GameRelease.swift in Sources */,
 				EFC46694255468B80053DC06 /* SceneDelegate.swift in Sources */,
 				EFC467032554773B0053DC06 /* Catalogue.swift in Sources */,
 				EFD4092B25594257003158F7 /* BaseRepository.swift in Sources */,
 				EFC4672625548EE60053DC06 /* IdentifiableProtocol.swift in Sources */,
+				EF9EF7A8255E8977001B056A /* CachedGamesTableViewController.swift in Sources */,
+				EF685029255EE7D700A7E1DA /* CataloguesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

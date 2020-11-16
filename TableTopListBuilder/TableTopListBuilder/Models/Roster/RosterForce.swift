@@ -7,10 +7,10 @@
 
 import Foundation
 
-class RosterForce: Codable {
+struct RosterForce: Codable {
     
     // MARK: RosterForce Variables
     
-    let forceOrganisation: ForceOrganisation
+    let detachment: Detachment
     let catalogue: Catalogue
 }

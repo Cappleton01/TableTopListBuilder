@@ -9,8 +9,22 @@ import Foundation
 
 class Unit: Codable, IdentifiableProtocol, PointsProtocol {
     
+    enum Role: String, Codable {
+        
+        case hq = "HQ"
+        case troops = "Troops"
+        case elites = "Elites"
+        case fastAttack = "FastAttack"
+        case heavySupport = "HeavySupport"
+        case dedicatedTransport = "DedicatedTransport"
+        case flyer = "Flyer"
+        case fortification = "Fortification"
+        case lordOfWar = "LordOfWar"
+    }
+    
     // MARK: Unit Variables
     
+    public let role: Role
     public let name: String
     public let minUnitSize: Int
     public let maxUnitSize: Int

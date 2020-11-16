@@ -53,7 +53,7 @@ class GamesTableViewController: UITableViewController {
     
     // MARK: Helper Methods
     
-    private func gameStatusText(for downloadStatus: GamesManager.RepositoryStatus) -> String? {
+    private func gameStatusText(for downloadStatus: GamesManager.GamesStatus) -> String? {
         
         switch downloadStatus {
         case .notDownloaded: return "Not Downloaded"

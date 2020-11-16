@@ -11,7 +11,7 @@ class GamesManager {
     
     // MARK: Enums
     
-    enum RepositoryStatus {
+    enum GamesStatus {
         case notDownloaded
         case downloading
         case downloaded
@@ -91,7 +91,14 @@ class GamesManager {
     
     // MARK: Helper Methods
     
-    func status(for game: GameSummary) -> RepositoryStatus {
+    func status(for game: GameSummary) -> GamesStatus {
+        
+        if cachedGames.contains(where: { (cachedGame) -> Bool in
+            cachedGame.id == game.id
+        }) {
+            return .downloaded
+        }
+        
         /*
         if DownloadManager.sharedInstance.isGameDownloaded(game) {
             return .downloaded

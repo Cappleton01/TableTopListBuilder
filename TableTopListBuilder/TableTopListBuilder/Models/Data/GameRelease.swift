@@ -1,5 +1,5 @@
 //
-//  RepositoryRelease.swift
+//  GameRelease.swift
 //  TableTopListBuilder
 //
 //  Created by Craig Appleton on 06/11/2020.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RepositoryRelease: Codable {
+struct GameRelease: Codable {
     
     enum CodingKeys: String, CodingKey {
         case id

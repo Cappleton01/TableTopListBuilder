@@ -13,6 +13,7 @@ struct Game: Codable, Hashable {
     
     let id: Int
     let name: String
+    let detachments: [Detachment]
     let catalogues: [Catalogue]
     
     
