@@ -15,6 +15,7 @@
 		EF77086025560EB7007939ED /* GameRelease.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77085F25560EB7007939ED /* GameRelease.swift */; };
 		EF7708662556121C007939ED /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = EF7708652556121C007939ED /* Zip */; };
 		EF770871255704E9007939ED /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF770870255704E9007939ED /* DownloadManager.swift */; };
+		EF8F58CE2562F5BF006D6694 /* PowerLevelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8F58CD2562F5BF006D6694 /* PowerLevelProtocol.swift */; };
 		EF9EF7A8255E8977001B056A /* CachedGamesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9EF7A7255E8977001B056A /* CachedGamesTableViewController.swift */; };
 		EF9EF7AD255E8D85001B056A /* RosterForceNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9EF7AC255E8D85001B056A /* RosterForceNavigationController.swift */; };
 		EFBE9717256280AC00F4EC16 /* RosterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBE9715256280AC00F4EC16 /* RosterDetailsViewController.swift */; };
@@ -73,6 +74,7 @@
 		EF7708482555C7E8007939ED /* GamesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesManager.swift; sourceTree = "<group>"; };
 		EF77085F25560EB7007939ED /* GameRelease.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRelease.swift; sourceTree = "<group>"; };
 		EF770870255704E9007939ED /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
+		EF8F58CD2562F5BF006D6694 /* PowerLevelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerLevelProtocol.swift; sourceTree = "<group>"; };
 		EF9EF7A7255E8977001B056A /* CachedGamesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedGamesTableViewController.swift; sourceTree = "<group>"; };
 		EF9EF7AC255E8D85001B056A /* RosterForceNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterForceNavigationController.swift; sourceTree = "<group>"; };
 		EFBE9715256280AC00F4EC16 /* RosterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterDetailsViewController.swift; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 				EFC46757255498910053DC06 /* CommandPointsProtocol.swift */,
 				EFC4672525548EE60053DC06 /* IdentifiableProtocol.swift */,
 				EFC4672B25548F1F0053DC06 /* PointsProtocol.swift */,
+				EF8F58CD2562F5BF006D6694 /* PowerLevelProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -448,6 +451,7 @@
 				EFC4673225548FF00053DC06 /* Model.swift in Sources */,
 				EFC46758255498910053DC06 /* CommandPointsProtocol.swift in Sources */,
 				EFC4673325548FF00053DC06 /* ModelStats.swift in Sources */,
+				EF8F58CE2562F5BF006D6694 /* PowerLevelProtocol.swift in Sources */,
 				EFC46740255492620053DC06 /* RostersTableViewController.swift in Sources */,
 				EF9EF7AD255E8D85001B056A /* RosterForceNavigationController.swift in Sources */,
 				EFC4672C25548F1F0053DC06 /* PointsProtocol.swift in Sources */,

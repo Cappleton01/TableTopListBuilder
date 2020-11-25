@@ -17,6 +17,7 @@ class RosterDetailsViewController: UIViewController, UITableViewDataSource, UITa
     
     @IBOutlet private var forcesTableView: UITableView!
     @IBOutlet private var detailsTabView: UIView!
+    @IBOutlet private var nameTextField: UITextField!
     private var addBarButtonItem: UIBarButtonItem?
     
     
@@ -68,7 +69,7 @@ class RosterDetailsViewController: UIViewController, UITableViewDataSource, UITa
     
     func addForce(_ force: RosterForce, game: Game) {
         
-        let roster = self.roster ?? Roster(name: "New Roster", game: game, forces: [])
+        let roster = self.roster ?? Roster(name: "\(force.catalogue.name) - \(force.detachment.name)", game: game, forces: [])
         roster.forces.append(force)
         
         if self.roster == nil {
@@ -91,6 +92,11 @@ class RosterDetailsViewController: UIViewController, UITableViewDataSource, UITa
         self.navigationItem.rightBarButtonItem = sender.selectedSegmentIndex == 0 ? addBarButtonItem : nil
         forcesTableView.isHidden = sender.selectedSegmentIndex != 0
         detailsTabView.isHidden = sender.selectedSegmentIndex != 1
+        
+        if sender.selectedSegmentIndex == 1 {
+            
+            nameTextField.text = roster?.name
+        }
     }
     
     

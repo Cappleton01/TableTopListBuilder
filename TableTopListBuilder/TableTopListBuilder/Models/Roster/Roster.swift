@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Roster: Codable {
+class Roster: Codable, PointsProtocol, CommandPointsProtocol {
     
     // MARK: Roster Variables
     
@@ -15,6 +15,8 @@ class Roster: Codable {
     var name: String
     let game: Game
     var forces: [RosterForce]
+    var points: Int = -1
+    var cp: Int = -1
     
     
     // MARK: Life Cycle

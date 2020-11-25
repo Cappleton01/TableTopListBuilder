@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Unit: Codable, IdentifiableProtocol, PointsProtocol {
+class Unit: Codable, IdentifiableProtocol, PointsProtocol, CommandPointsProtocol {
     
     enum Role: String, Codable {
         
@@ -50,4 +50,9 @@ class Unit: Codable, IdentifiableProtocol, PointsProtocol {
         
         return points
     }
+    
+    
+    // MARK: CommandPointsProtocol Variable
+    
+    public var cp: Int
 }

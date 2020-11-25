@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="detailsTabView" destination="tcM-Ll-eJs" id="2FZ-jk-9dH"/>
                 <outlet property="forcesTableView" destination="mcy-7L-Z2j" id="qph-aw-t9k"/>
+                <outlet property="nameTextField" destination="nmt-kP-W7l" id="7fF-mg-OCt"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -29,9 +30,24 @@
                         <outlet property="delegate" destination="-1" id="WMX-0S-cQe"/>
                     </connections>
                 </tableView>
-                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tcM-Ll-eJs">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tcM-Ll-eJs">
                     <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nmt-kP-W7l">
+                            <rect key="frame" x="32" y="0.0" width="350" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="INW-Si-XTN"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="nmt-kP-W7l" firstAttribute="leading" secondItem="tcM-Ll-eJs" secondAttribute="leading" constant="32" id="2ER-ew-dLc"/>
+                        <constraint firstItem="nmt-kP-W7l" firstAttribute="top" secondItem="tcM-Ll-eJs" secondAttribute="top" id="dhy-E8-7zt"/>
+                        <constraint firstAttribute="trailing" secondItem="nmt-kP-W7l" secondAttribute="trailing" constant="32" id="pY5-fa-hf7"/>
+                    </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
